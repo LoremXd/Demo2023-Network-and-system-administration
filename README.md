@@ -1,11 +1,11 @@
 # Demo2023-Network-and-system-administration
 Guide for Demoexam 2023
-Методичка по выполнению демонстрационного экзамена СИСА 2023г
-Настройка ip-адресации
+
 CLI настраиваем первым и после этого этапа переходим к SRV
 ![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/35e6c0bf-9e22-484a-a2b8-80397ec7b872)
 
 После доустановки SRV он включается почти мгновенно. Не теряя времени нажимаем комбинацию клавиш Win+R и вводим sconfig
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/329e8fec-b95e-4090-892f-c1586222b5d4)
 
 Мы переходим в синюю панель sconfig, где можем настроить всё, что нужно.
 - Нажимаем 4 (Пункт Configure Remote Management), далее 1 (Enable Remote Manegement) – подтверждаем, далее 3 ( Configure Server Response) – подтверждаем
@@ -13,57 +13,86 @@ CLI настраиваем первым и после этого этапа пе
 - Нажимаем 4 (Return to main menu), что возвращает нас обратно в главную панель
 - Нажимаем 8 (Network Settings), далее 1 (выбираем единственный интерфейс), переходим в панель настройки адаптера. 
 Нажимаем 1 (Set Network Adapter Address). На вопрос о выборе метода настройки интерфейса выбираем статическую (Пишем S)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/78b5f8ae-8364-4149-9f47-b364415f09cf)
 
 
 Вводим нужный нам ip адрес
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/7b1979c9-ee60-49b3-b648-53bd581fa81a)
 
 Далее нам предлагают ввести маску. Нажимаем enter так как маска по умолчанию 24, которая нам и нужна
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/9cb55ce0-dd10-40f3-aa78-40cbefb2c79d)
 
 Вводим шлюз по умолчанию
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/73367b27-d6f8-49e8-8029-6be531d2490a)
 
 - Нажимаем 2 пункт (Set DNS Servers)
 Вводим локальный ip, так как SRV является DNS сервером
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/f61c552b-c32d-47e7-8dc2-9b0edeeb9c87)
 
 Далее нам предлагается ввести альтернативный DNS сервер. Просто жмём enter
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/b579adfe-07ce-4541-8e32-f46748f9d10c)
 
 - Вводим 4 и выходим в главное меню. Последнее что нам нужно это изменить имя компьютера.
 - Нажимаем 2 (Computer Name) и меняем его на SRV
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/df0e96ec-e667-437d-b682-8ba97526d1cf)
 
 И соглашаемся на перезапуск
 
 Переходим обратно к CLI и теперь будем настраивать ip ему.
 Нажимаем комбинацию клавиш Win+R и вводим ncpa.cpl. Это действие перекинет нас в меню настроек адаптеров
-
-
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/276e8e62-9c01-4cfc-a47c-624b64f44a48)
 
 Переходим в настройки нашего адаптера/настройки ipv4
-
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/db36ba68-c218-42ed-a8d2-22dc25e936d2)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/67a9dca0-2eef-46ec-a0af-18dc06afdca3)
 
 И вводим нужную нам адресацию
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/cc7c8ff9-c1c4-41d6-9c9a-4470199649bd)
 
 
 Переходим к машинкам на Debian
  Устанавливаем Network Manager
-
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/5373a4c8-5bf0-4c33-9ad1-f2cb6d5e5feb)
+Пишем nmtui
 Настроим ip и hostname согласно топологии с помощью nmtui
 - Сверяем наши MAC-Адреса интерфейсов с MAC-адресами интерфейсов с панели настроек виртуальных машин
 - После сверки переходим к настройке
 ISP
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/c6edb2bc-c41a-44aa-9b36-52c924c50e6c)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/172536f9-cffb-4f1e-80d3-adb2247ad3f5)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/3871be1f-09c0-4766-9c6e-2803e3cb8bc9)
+
 Необходимо произвести эти действия на WEB-L, WEB-R, ISP.
 
 Переходим к машинам cisco
 RTR-L
 Ставим hostname 
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/a4cabcf6-d4bd-4943-a6eb-59dc1177d159)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/f51e9df8-429c-4d8c-ba86-d74797a7c715)
+
 Настройка gi1 (Смотрит в сторону зоны LEFT)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/796eb732-9f53-4b01-93da-bebbecab446f)
+
 Настройка gi2 (Смотрит в сторону ISP)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/83806c3b-d105-4d3e-a14f-4bb4bf5992cc)
+
 RTR-R
 Настройка gi1 (Смотрит в сторону зоны RIGHT)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/2a5de67d-14a3-42ff-b24a-c3ad249d192d)
+
 Настройка gi2 (Смотрит в сторону ISP)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/1343818d-15dd-4556-b743-9a1c7e61344f)
 
 
 Настроим PAT
 RTR-L
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/ce7a887a-5a7a-4c0c-a511-0eabee80491f)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/2d0ac3c2-172b-49ae-bd0b-00e7304130a1)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/a2d7c1d2-37f4-47f5-865f-3e1e50e882c1)
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/b95f2573-fd23-441c-8d9b-4de5eee3848f)
+
 RTR-R
+![image](https://github.com/LoremXd/Demo2023-Network-and-system-administration/assets/74175142/175cb7f0-82c7-4fe3-8342-9d6e416611ec)
 
 Сетевая связность.
 На ISP нужно настроить пересылку пакетов.
